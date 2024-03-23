@@ -1,13 +1,6 @@
 # SAM_Annotation
 
 # Image Annotation with SegmenAnything (SAM)
-
-Welcome to our repository that focuses on efficient and precise annotation and segmentation of semantic segmentation. This codebase is dedicated to the data annotation tool designed using PyQt5. For the UNet image segmentation part and the fine-tuning of the SAM model, please refer to our other repositories.
-
-[FineTuneSAM-with-Bounding-Box](https://github.com/wudi-ldd/Fine-Tuning-SAM).
-
-[U-Net](https://github.com/wudi-ldd/U-Net).
-
 ## Key Features
 
 - **Point Annotation**: Utilize minimal points to define complex structures in tight sandstone image pores.
