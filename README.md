@@ -14,16 +14,13 @@
 
 ## Model Usage Instructions
 
-Download the pre-trained weights of the SAM model and place them in the `checkpoints` folder. [Download Link](https://github.com/facebookresearch/segment-anything)
-
+Download the pre-trained weights of the SAM model and place them in the `checkpoints` folder.
 For `ViT-H` checkpoint: 
 ```
 cd checkpoints && wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth && cd ..
 ```
 
 For detailed instructions, refer to the [SAM Official Website](https://github.com/facebookresearch/segment-anything).
-
-**Step 3**: For fine-tuning the SAM model, you can refer to my other article: [Link to Article](https://github.com/wudi-ldd/Fine-Tuning-SAM)
 
 
 ## Installation
