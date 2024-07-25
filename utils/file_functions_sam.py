@@ -297,7 +297,7 @@ class ImageViewer:
                 "line_color": None,
                 "fill_color": None,
                 "points": mask_contour_points,
-                "segmentation": last_annotation_info["mask"],
+                "segmentation": last_annotation_info["mask"].tolist(),
                 "group_id": None,
                 "shape_type": "polygon",
                 "flags": {},
@@ -372,30 +372,30 @@ class ImageViewer:
     def saveAnnotationsToFile(self):
         if hasattr(self, "image") and self.image is not None:
             image_path = self.image.filename
-            masks = [anno["segmentation"] for anno in self.annotationStack]
+            masks = [np.array(anno["segmentation"]) for anno in self.annotationStack]
             labels = [anno["label"] for anno in self.annotationStack]
             save_path = image_path.rsplit(".", 1)[0] + ".npy"
             np.save(save_path, {"masks": masks, "labels": labels})
 
-        # if hasattr(self, "image") and self.image is not None:
-        #     image_path = self.image.filename
-        #     json_path = image_path.rsplit(".", 1)[0] + ".json"
+        if hasattr(self, "image") and self.image is not None:
+            image_path = self.image.filename
+            json_path = image_path.rsplit(".", 1)[0] + ".json"
 
-        #     json_data = {
-        #         "version": "3.16.7",
-        #         "flags": {},
-        #         "shapes": self.annotationStack,
-        #         "lineColor": [0, 255, 0, 128],
-        #         "fillColor": [255, 0, 0, 128],
-        #         "imagePath": os.path.basename(image_path),
-        #         "imageData": None,
-        #         "imageHeight": self.image.height,
-        #         "imageWidth": self.image.width,
-        #     }
+            json_data = {
+                "version": "3.16.7",
+                "flags": {},
+                "shapes": self.annotationStack,
+                "lineColor": [0, 255, 0, 128],
+                "fillColor": [255, 0, 0, 128],
+                "imagePath": os.path.basename(image_path),
+                "imageData": None,
+                "imageHeight": self.image.height,
+                "imageWidth": self.image.width,
+            }
 
-        #     dir_name = os.path.dirname(json_path)
-        #     if not os.path.exists(dir_name):
-        #         os.makedirs(dir_name)
+            dir_name = os.path.dirname(json_path)
+            if not os.path.exists(dir_name):
+                os.makedirs(dir_name)
 
-        #     with open(json_path, "w") as f:
-        #         json.dump(json_data, f, indent=4)
+            with open(json_path, "w") as f:
+                json.dump(json_data, f, indent=4)

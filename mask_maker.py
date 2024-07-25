@@ -28,11 +28,11 @@ def show_box(box, ax, name, index, color, plt_name=False, plt_index=False):
             h,
             edgecolor=color,
             facecolor=(0, 0, 0, 0),
-            lw=5,
+            lw=2,
         )
     )
     if plt_name:
-        plt.text(x0, y0, name, fontsize=20, color=color)
+        plt.text(x0, y0, name, fontsize=10, color=color)
     if plt_index:
         plt.text((x0 + x1) / 2, (y0 + y1) / 2, str(index), fontsize=10, color=color)
 
