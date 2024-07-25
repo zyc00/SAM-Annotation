@@ -8,5 +8,5 @@ GUI:
   window_width: 1920
   window_height: 1080
 Annotation:
-  image_folder: "./example"
+  image_folder: "./gaussian_jul_25"
   categories: ["chair", "table", "banana", "hammer", "can"]

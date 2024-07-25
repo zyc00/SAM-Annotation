@@ -60,9 +60,20 @@ The annotation results will be saved as a `.npy` file in the image folder.
 - **E**: Finish annotation and save the current mask state.
 - **S**: Save annotation to a `.npy` file.
 
+## Mask Visualizer
+```
+python mask_maker.py [--plot_cat] [--plot_index] [--save]
+```
+`--plot_cat`: show category name on the image.
+
+`--plot_index`: show index on the image.
+
+`--save` save annotated image.
+
+![Visualization](assets/annotation.png)  
+
 ## TODO:
 - Segmentation proposals with text prompts.
-- Mask & label visualization.
 
 
 
