@@ -47,16 +47,6 @@
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
-            <item>
-             <property name="text">
-              <string>_background_</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>pore</string>
-             </property>
-            </item>
            </widget>
           </item>
           <item>

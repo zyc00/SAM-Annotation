@@ -1,0 +1,12 @@
+SAM:
+  model_type: "vit_h"
+  checkpoint_path: "checkpoints/sam_vit_h_4b8939.pth"
+GUI:
+  use_proportion: True
+  window_width_proportion: 0.8
+  window_height_proportion: 0.8
+  window_width: 1920
+  window_height: 1080
+Annotation:
+  image_folder: "./example"
+  categories: ["chair", "table", "banana", "hammer", "can"]
