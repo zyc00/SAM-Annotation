@@ -14,17 +14,11 @@
 
 ## Model Usage Instructions
 
-**Step 1**: Download the pre-trained weights of the SAM model and place them in the `checkpoints` folder. [Download Link](https://github.com/facebookresearch/segment-anything)
+Download the pre-trained weights of the SAM model and place them in the `checkpoints` folder. [Download Link](https://github.com/facebookresearch/segment-anything)
 
 For `ViT-H` checkpoint: 
 ```
 cd checkpoints && wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth && cd ..
-```
-
-**Step 2**: Modify the following lines in `utils\file_functions.py` according to the chosen weight type:
-```python
-   sam_checkpoint = "checkpoints\sam_vit_h_4b8939.pth"
-   model_type = "vit_h"
 ```
 
 For detailed instructions, refer to the [SAM Official Website](https://github.com/facebookresearch/segment-anything).
